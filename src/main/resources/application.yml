@@ -2,3 +2,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/spring_webflux
+config:
+  uploads:
+    #path: "${HOMEPATH}//temp//"
+    path: D://temp//

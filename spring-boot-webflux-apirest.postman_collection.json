@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "355077a2-7cbd-4fa3-bec4-2ee6863e934e",
+		"name": "spring-boot-webflux-apirest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/601b7bee368a5631c5354d95",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"601b7bee368a5631c5354d95"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"TV LG LED\",\r\n    \"price\": 850.5,\r\n    \"category\": {\r\n        \"id\": \"6017927d4531b149d11cd792\",\r\n        \"name\": \"Electrónico\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Camara Sony 4K - 60X\",\r\n    \"price\": 1420.5,\r\n    \"category\": {\r\n        \"id\": \"60179555bfb6e23742398a2e\",\r\n        \"name\": \"Electrónico\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/601798a07a8ff869a7be1655",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"601798a07a8ff869a7be1655"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "filePart",
+							"type": "file",
+							"src": "/D:/OneDrive/Imágenes/20170226_105557.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/product/upload/601b84cf2622200bb9447dab",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"upload",
+						"601b84cf2622200bb9447dab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post product & upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "filePart",
+							"type": "file",
+							"src": "/D:/OneDrive/Imágenes/20170226_105557.jpg"
+						},
+						{
+							"key": "name",
+							"value": "Bicicleta",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "900",
+							"type": "text"
+						},
+						{
+							"key": "category.id",
+							"value": "601b86ea7a012700e4048837",
+							"type": "text"
+						},
+						{
+							"key": "category.name",
+							"value": "Deporte",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/product/v2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"v2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
