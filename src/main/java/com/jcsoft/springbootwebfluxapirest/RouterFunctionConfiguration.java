@@ -8,7 +8,11 @@ import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
-import static org.springframework.web.reactive.function.server.RequestPredicates.*;
+import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
+import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
+import static org.springframework.web.reactive.function.server.RequestPredicates.PUT;
+import static org.springframework.web.reactive.function.server.RequestPredicates.DELETE;
+import static org.springframework.web.reactive.function.server.RequestPredicates.contentType;
 
 @Configuration
 public class RouterFunctionConfiguration
@@ -30,7 +34,7 @@ public class RouterFunctionConfiguration
                 .andRoute(POST("/api/v2/product"), handler::create)
                 .andRoute(PUT("/api/v2/product/{id}"), handler::edit)
                 .andRoute(DELETE("/api/v2/product/{id}"), handler::delete)
-                .andRoute(POST("/api/v2/product/upload/{id}"),handler::upload)
-                .andRoute(POST("/api/v2/product/photo"),handler::createWithPhoto);
+                .andRoute(POST("/api/v2/product/upload/{id}"), handler::upload)
+                .andRoute(POST("/api/v2/product/photo"), handler::createWithPhoto);
     }
 }

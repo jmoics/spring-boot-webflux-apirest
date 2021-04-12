@@ -52,6 +52,12 @@ public class ProductServiceImpl
     }
 
     @Override
+    public Mono<Product> findByName(final String name)
+    {
+        return productRepository.findByName(name);
+    }
+
+    @Override
     public Mono<Product> save(final Product product)
     {
         return productRepository.save(product);

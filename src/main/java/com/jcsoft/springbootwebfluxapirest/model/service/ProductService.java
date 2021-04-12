@@ -15,6 +15,8 @@ public interface ProductService
 
     Mono<Product> findById(String id);
 
+    Mono<Product> findByName(String name);
+
     Mono<Product> save(Product product);
 
     Mono<Void> delete(Product product);
